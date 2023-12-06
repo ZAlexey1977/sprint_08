@@ -81,10 +81,14 @@ const obj_07 = {
     name: "shooting",
     balls: [21, 19, 22, 17, 13, 9],
 };
-// const f_07 = (): тут укажите тип => {
-// }
+const f_07 = () => {
+    let arr = obj_07.balls.sort((a, b) => {
+        return b - a;
+    });
+    return arr[0];
+};
 document.querySelector(".b-7").addEventListener("click", () => {
-    // document.querySelector('.out-7').textContent = String(f_07());
+    document.querySelector(".out-7").textContent = String(f_07());
 });
 // Task 08
 // Создан объект obj_08. Напишите функцию, которая все свойства объекта приводит к нижнему регистру и удаляет пробелы по краям.
@@ -93,10 +97,14 @@ const obj_08 = {
     email: "potter_DEER@howards.MagiC ",
     username: "Rundic UOzlik",
 };
-// const f_08 = (): тут укажите тип => {
-// }
+const f_08 = () => {
+    for (let key in obj_08) {
+        obj_08[key] = obj_08[key].toLowerCase().trim();
+    }
+    return obj_08;
+};
 document.querySelector(".b-8").addEventListener("click", () => {
-    // f_08();
+    f_08();
     console.log(obj_08);
 });
 // Task 09

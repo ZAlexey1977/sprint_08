@@ -101,11 +101,15 @@ const obj_07: { name: string; balls: number[] } = {
   balls: [21, 19, 22, 17, 13, 9],
 };
 
-// const f_07 = (): тут укажите тип => {
-// }
+const f_07 = (): number => {
+  let arr: number[] = obj_07.balls.sort((a, b) => {
+    return b - a;
+  });
+  return arr[0];
+};
 
 document.querySelector(".b-7").addEventListener("click", (): void => {
-  // document.querySelector('.out-7').textContent = String(f_07());
+  document.querySelector(".out-7").textContent = String(f_07());
 });
 
 // Task 08
@@ -116,13 +120,15 @@ const obj_08: { name: string; email: string; username: string } = {
   email: "potter_DEER@howards.MagiC ",
   username: "Rundic UOzlik",
 };
-
-// const f_08 = (): тут укажите тип => {
-
-// }
+const f_08 = (): { name: string; email: string; username: string } => {
+  for (let key in obj_08) {
+    obj_08[key] = obj_08[key].toLowerCase().trim();
+  }
+  return obj_08;
+};
 
 document.querySelector(".b-8").addEventListener("click", (): void => {
-  // f_08();
+  f_08();
   console.log(obj_08);
 });
 
