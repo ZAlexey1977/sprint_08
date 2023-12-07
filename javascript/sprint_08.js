@@ -101,7 +101,6 @@ const f_08 = () => {
     for (let key in obj_08) {
         obj_08[key] = obj_08[key].toLowerCase().trim();
     }
-    return obj_08;
 };
 document.querySelector(".b-8").addEventListener("click", () => {
     f_08();
@@ -115,7 +114,6 @@ const obj_09 = {
 };
 const f_09 = () => {
     obj_09.members = obj_09.members.sort();
-    //return obj_09.members;
 };
 document.querySelector(".b-9").addEventListener("click", () => {
     f_09();
@@ -162,7 +160,12 @@ const obj_12 = {
     hit: [3, 4, 5],
 };
 const f_12 = () => {
-    return;
+    return {
+        title: "Древний огр",
+        step: 1,
+        defense: 8,
+        stamina: 14,
+    };
 };
 document.querySelector(".b-12").addEventListener("click", () => {
     console.log(f_12());
@@ -177,7 +180,7 @@ const obj_13 = {
     hit: [3, 3, 4],
 };
 const f_13 = ({ title, step }) => {
-    return;
+    return obj_13.title;
 };
 document.querySelector(".b-13").addEventListener("click", () => {
     document.querySelector(".out-13").textContent = f_13(obj_13);
@@ -185,7 +188,7 @@ document.querySelector(".b-13").addEventListener("click", () => {
 // Task 14
 // Функция получает объект как аргумент, возвращает значение свойства hit. Не забывайте прописывать тип функции!!!
 const f_14 = ({ hit }) => {
-    return;
+    return hit;
 };
 document.querySelector(".b-14").addEventListener("click", () => {
     document.querySelector(".out-14").textContent = f_14(obj_13).join(" ");

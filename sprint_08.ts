@@ -120,11 +120,10 @@ const obj_08: { name: string; email: string; username: string } = {
   email: "potter_DEER@howards.MagiC ",
   username: "Rundic UOzlik",
 };
-const f_08 = (): { name: string; email: string; username: string } => {
+const f_08 = (): void => {
   for (let key in obj_08) {
     obj_08[key] = obj_08[key].toLowerCase().trim();
   }
-  return obj_08;
 };
 
 document.querySelector(".b-8").addEventListener("click", (): void => {
@@ -142,7 +141,6 @@ const obj_09: { band: string; members: string[]; location?: string } = {
 
 const f_09 = (): void => {
   obj_09.members = obj_09.members.sort();
-  //return obj_09.members;
 };
 
 document.querySelector(".b-9").addEventListener("click", (): void => {
@@ -210,7 +208,12 @@ const f_12 = (): {
   defense: number;
   stamina: number;
 } => {
-  return;
+  return {
+    title: "Древний огр",
+    step: 1,
+    defense: 8,
+    stamina: 14,
+  };
 };
 
 document.querySelector(".b-12").addEventListener("click", (): void => {
@@ -235,7 +238,7 @@ const obj_13: {
 };
 
 const f_13 = ({ title, step }: { title: string; step: number }): string => {
-  return;
+  return obj_13.title;
 };
 
 document.querySelector(".b-13").addEventListener("click", (): void => {
@@ -246,7 +249,7 @@ document.querySelector(".b-13").addEventListener("click", (): void => {
 // Функция получает объект как аргумент, возвращает значение свойства hit. Не забывайте прописывать тип функции!!!
 
 const f_14 = ({ hit }: { hit: number[] }): number[] => {
-  return;
+  return hit;
 };
 
 document.querySelector(".b-14").addEventListener("click", (): void => {
