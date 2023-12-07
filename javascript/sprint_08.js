@@ -113,10 +113,12 @@ const obj_09 = {
     band: "System of a Town",
     members: ["Serj", "Daron", "Shavo", "John"],
 };
-// const f_09 = (): тут укажите тип => {
-// }
+const f_09 = () => {
+    obj_09.members = obj_09.members.sort();
+    //return obj_09.members;
+};
 document.querySelector(".b-9").addEventListener("click", () => {
-    // f_09();
+    f_09();
     console.log(obj_09);
 });
 // Task 10
@@ -133,10 +135,13 @@ const obj_10 = {
         "14235687",
     ],
 };
-// const f_10 = (): тут укажите тип => {
-// }
+const f_10 = () => {
+    obj_10.data = obj_10.data.filter((el) => {
+        return el.length !== 6;
+    });
+};
 document.querySelector(".b-10").addEventListener("click", () => {
-    // f_10();
+    f_10();
     console.log(obj_10.data);
 });
 // Task 11

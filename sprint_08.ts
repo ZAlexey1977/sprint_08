@@ -140,12 +140,13 @@ const obj_09: { band: string; members: string[]; location?: string } = {
   members: ["Serj", "Daron", "Shavo", "John"],
 };
 
-// const f_09 = (): тут укажите тип => {
-
-// }
+const f_09 = (): void => {
+  obj_09.members = obj_09.members.sort();
+  //return obj_09.members;
+};
 
 document.querySelector(".b-9").addEventListener("click", (): void => {
-  // f_09();
+  f_09();
   console.log(obj_09);
 });
 
@@ -165,11 +166,14 @@ const obj_10: { date: string; data: string[] } = {
   ],
 };
 
-// const f_10 = (): тут укажите тип => {
-// }
+const f_10 = (): void => {
+  obj_10.data = obj_10.data.filter((el) => {
+    return el.length !== 6;
+  });
+};
 
 document.querySelector(".b-10").addEventListener("click", (): void => {
-  // f_10();
+  f_10();
   console.log(obj_10.data);
 });
 
