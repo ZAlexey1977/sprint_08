@@ -260,10 +260,15 @@ document.querySelector(".b-14").addEventListener("click", (): void => {
 // Функция получаем объект как аргумент, и возвращает true,
 // если есть хотя бы один удар (hit) по силе больший чем 5 и false в противном случае.
 
-// const f_15 = ({ hit }: { hit: number[] }): тут напишите тип => {
-
-// }
+const f_15 = ({ hit }: { hit: number[] }): boolean => {
+  for (let i = 0; i < hit.length; i++) {
+    if (hit[i] > 5) {
+      return true;
+    }
+  }
+  return false;
+};
 
 document.querySelector(".b-15").addEventListener("click", (): void => {
-  // document.querySelector('.out-15').textContent = String(f_15(obj_13));
+  document.querySelector(".out-15").textContent = String(f_15(obj_13));
 });
